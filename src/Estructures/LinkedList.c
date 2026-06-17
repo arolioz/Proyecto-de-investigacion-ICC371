@@ -8,7 +8,7 @@ int add(int a,int b){
 
 LINKED_LIST *create(int value){
     LINKED_LIST *new = (LINKED_LIST*)malloc(sizeof(LINKED_LIST) * 1);
-    new->value = 10;
+    new->value = value;
 
     return new;
 }

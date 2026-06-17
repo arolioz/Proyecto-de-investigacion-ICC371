@@ -3,7 +3,12 @@
 
 
 int main(void){
-    LINKED_LIST *test = create(10);
+    int n;
+    
+    printf("N: ");
+    scanf("%i",&n);
+
+    LINKED_LIST *test = create(n);
     
     printf("%i\n", test->value);
 }
