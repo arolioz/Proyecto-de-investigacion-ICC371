@@ -13,10 +13,14 @@ typedef struct node
 typedef struct LinkedList
 {
     NODE *head;
-    NODE *tail;
 }LINKED_LIST;
 
-LINKED_LIST *create(int value, int amount);
+LINKED_LIST *create_linkedList(int value, int amount);
+int insertar_linkedList(LINKED_LIST *list, int value);
+int buscar_linkedList(LINKED_LIST *list, int value);
+int eliminar_linkedList(LINKED_LIST *list, int value);
+void mostrar_linkedList(LINKED_LIST *list);
+
 int add(int a, int b);
 int multiply(int a, int b);
 
