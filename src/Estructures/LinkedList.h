@@ -15,7 +15,7 @@ typedef struct LinkedList
     NODE *head;
 }LINKED_LIST;
 
-LINKED_LIST *create_linkedList(int value, int amount);
+LINKED_LIST *create_linkedList(int amount);
 int insertar_linkedList(LINKED_LIST *list, int value);
 int buscar_linkedList(LINKED_LIST *list, int value);
 int eliminar_linkedList(LINKED_LIST *list, int value);
