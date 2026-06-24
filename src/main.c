@@ -59,7 +59,7 @@ int main(void){
             break;
         case 2:
             printf("Listas entrelazadas\n");
-            LINKED_LIST *list = create_linkedList(5,50000);
+            LINKED_LIST *list = create_linkedList(50000);
 
             if (operacion == 1) {
                 insertar_linkedList(list, 15);
