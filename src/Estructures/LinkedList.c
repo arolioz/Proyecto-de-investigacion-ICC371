@@ -7,7 +7,7 @@ int add(int a,int b){
 }
 
 
-LINKED_LIST *create_linkedList(int value, int amount)
+LINKED_LIST *create_linkedList(int amount)
 {
     LINKED_LIST *list = (LINKED_LIST *)malloc(sizeof(LINKED_LIST));
 
@@ -18,7 +18,7 @@ LINKED_LIST *create_linkedList(int value, int amount)
 
     for (int i = 0; i < amount; i++)
     {
-        insertar_linkedList(list, value);
+        insertar_linkedList(list, i+1);
     }
 
     return list;
@@ -59,6 +59,8 @@ int insertar_linkedList(LINKED_LIST *list, int value)
 
 int eliminar_linkedList(LINKED_LIST *list, int value)
 {
+   
+
     if (list == NULL || list->head == NULL)
         return 0;
 
