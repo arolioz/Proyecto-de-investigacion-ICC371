@@ -1,6 +1,6 @@
 @echo off
 
-gcc -o test src/main.c src/Estructures/LinkedList.c -o test.exe
+gcc ./test.c src/Estructures/LinkedList.c src/Estructures/stack.c src/Estructures/queue.c src/Estructures/binary_tree.c src/Estructures/hash_table.c src/Estructures/array.c -o main.exe
 
 if %errorlevel% neq 0 (
     echo Error de compilacion
@@ -12,6 +12,6 @@ echo.
 echo Ejecutando programa...
 echo.
 
-test.exe
+main.exe
 
 pause
