@@ -39,19 +39,20 @@ ARRAY *create_array(int amount)
 
 
 
-// Insertar en una posición específica
+
 int insert_array(ARRAY *array, int index, int value)
 {
-    if(array == NULL)
+    if (array == NULL)
         return 0;
 
+    int *temp = realloc(array->data, sizeof(int) * (array->size + 1));
 
-    if(index < 0 || index >= array->size)
+    if (temp == NULL)
         return 0;
 
-
-    array->data[index] = value;
-
+    array->data = temp;
+    array->data[array->size] = value;
+    array->size++;
 
     return 1;
 }
