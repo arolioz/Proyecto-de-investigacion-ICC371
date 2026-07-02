@@ -22,17 +22,12 @@ BINARY_TREE *create_tree(int amount)
 {
     BINARY_TREE *tree = malloc(sizeof(BINARY_TREE));
 
-    if(tree == NULL)
+    if (tree == NULL)
         return NULL;
 
     tree->root = NULL;
 
-
-    for(int i = 1; i <= amount; i++)
-    {
-        insert_tree(tree, i);
-    }
-
+    create_balanced(tree, 1, amount);
 
     return tree;
 }
@@ -189,4 +184,17 @@ int delete_tree(BINARY_TREE *tree, int value)
     tree->root = delete_node(tree->root, value);
 
     return 1;
+}
+
+void create_balanced(BINARY_TREE *tree, int start, int end)
+{
+    if (start > end)
+        return;
+
+    int mid = (start + end) / 2;
+
+    insert_tree(tree, mid);
+
+    create_balanced(tree, start, mid - 1);
+    create_balanced(tree, mid + 1, end);
 }

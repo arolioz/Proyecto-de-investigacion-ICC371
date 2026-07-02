@@ -181,6 +181,7 @@ int main(void){
 
                 inicio = clock();
 
+                inorder(arbol);
                 if (operacion == 1) {
                     insert_tree(arbol, 17);
                     
