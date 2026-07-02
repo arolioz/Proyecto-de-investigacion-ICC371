@@ -1,7 +1,12 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include "Estructures/LinkedList.h"
+#include "Estructures/hash_table.h"
+#include "Estructures/Array.h"
+
 #include <time.h>
+
+void menuEstructuras();
 
 
 int main(void){
@@ -52,7 +57,7 @@ int main(void){
 
         do {
             printf("\nCantidad de elementos\n");
-            printf("1. 1000\n");\
+            printf("1. 1000\n");
             printf("2. 50000\n");
             printf("3. 250000\n");
             printf("4. 500000\n");
@@ -67,6 +72,35 @@ int main(void){
         {
             case 1:
                 printf("Arreglos\n");
+
+                ARRAY *arreglo = create_array(cantidadElementos[cantidad - 1]);
+
+                inicio = clock();
+
+                if (operacion == 1) {
+                    insert_array(arreglo, 2, 15);
+                }
+                if (operacion == 2) {
+                    int index = search_array(arreglo, cantidadElementos[cantidad - 1]);
+                    printf("El valor %d se encuentra en el índice: %d\n", cantidadElementos[cantidad - 1], index); 
+                } 
+                if (operacion == 3) {
+                    int result = delete_array(arreglo, 1);
+                    if (result) {
+                        printf("El valor 1 ha sido eliminado de la lista.\n");
+                    } else {
+                        printf("El valor 1 no se encuentra en la lista.\n");
+                    }
+
+                }
+                fin = clock();
+                tiempoTotal = (double)(fin - inicio) / CLOCKS_PER_SEC;
+
+                printf("\nOperacion: %s\n", operaciones[operacion - 1]);
+                printf("Cantidad de elementos: %d\n", cantidadElementos[cantidad - 1]);
+                printf("Tiempo de ejecucion: %f segundos\n\n", tiempoTotal);
+                printf("----------------------------------------\n");
+
                 break;
             case 2:
                 printf("Listas entrelazadas\n");
@@ -104,17 +138,28 @@ int main(void){
             case 3:
                 printf("Tabla Hash\n");
                 
-                //LINKED_LIST *list = create_linkedList(cantidadElementos[cantidad - 1]);
+                HASH_TABLE *lista = create_hash_table(cantidadElementos[cantidad - 1]);
 
                 inicio = clock();
 
                 if (operacion == 1) {
-                    
+                    print_hash(lista);
+                    print_hash(lista);
+
                 }
                 if (operacion == 2) {
+                    int index = search_hash(lista,27);
+            
+                    printf("El valor %d se encuentra en el índice: %d\n",27, index); 
                      
                 } 
                 if (operacion == 3) {
+                    int result = delete_hash(lista, 15);
+                    if (result) {
+                        printf("El valor 15 ha sido eliminado de la tabla hash.\n");
+                    } else {
+                        printf("El valor 15 no se encuentra en la tabla hash.\n");
+                    }
                     
                 }
                 fin = clock();
@@ -129,7 +174,7 @@ int main(void){
             case 4:
                 printf("Arbol Binario de Busqueda (BST)\n");
 
-                printf("Tabla Hash\n");
+                //printf("Tabla Hash\n");
                 
                 //LINKED_LIST *list = create_linkedList(cantidadElementos[cantidad - 1]);
 
@@ -157,7 +202,7 @@ int main(void){
             case 5:
                 printf("Pila\n");
 
-                printf("Tabla Hash\n");
+                //printf("Tabla Hash\n");
                 
                 //LINKED_LIST *list = create_linkedList(cantidadElementos[cantidad - 1]);
 
@@ -216,7 +261,7 @@ int main(void){
 
         }
 
-    }while (estructura < 1 || estructura > 7);
+    }while (estructura != 7);
 
     return 0;
 

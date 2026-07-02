@@ -84,14 +84,14 @@ int search_hash(HASH_TABLE *hash, int value)
     while(current != NULL)
     {
         if(current->value == value)
-            return 1;
+            return index;
 
 
         current = current->next;
     }
 
 
-    return 0;
+    return -1;
 }
 
 
