@@ -190,8 +190,10 @@ int main(void){
                      
                 } 
                 if (operacion == 3) {
+                    delete_tree(arbol, 17);
                     
                 }
+
                 fin = clock();
                 tiempoTotal = (double)(fin - inicio) / CLOCKS_PER_SEC;
 
