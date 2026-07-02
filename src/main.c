@@ -41,7 +41,7 @@ int main(void){
     int cantidadElementos[] = {1000, 50000, 250000, 500000, 1000000};
     char *operaciones[] = {"Insercion", "Busqueda", "Eliminacion"};
     
-    long memoriaInicial, memoriaFinal, memoriaUsada;
+    double memoriaInicial, memoriaFinal, memoriaUsada;
 
     do {
 
@@ -112,7 +112,7 @@ int main(void){
                 printf("\nOperacion: %s\n", operaciones[operacion - 1]);
                 printf("Cantidad de elementos: %d\n", cantidadElementos[cantidad - 1]);
                 printf("Tiempo de ejecucion: %f segundos\n", tiempoTotal);
-                printf("Memoria usada: %ld KB\n\n", memoriaUsada);
+                printf("Memoria usada: %.6f KB\n\n", memoriaUsada);
                 printf("----------------------------------------\n");
 
                 break;
@@ -181,7 +181,7 @@ int main(void){
 
                 printf("\nOperacion: %s\n", operaciones[operacion - 1]);
                 printf("Cantidad de elementos: %d\n", cantidadElementos[cantidad - 1]);
-                printf("Tiempo de ejecucion: %f segundos\n\n", tiempoTotal);
+                printf("Tiempo de ejecucion: %.6f segundos\n\n", tiempoTotal);
                 printf("----------------------------------------\n");
 
                 break;
@@ -216,7 +216,7 @@ int main(void){
                 printf("\nOperacion: %s\n", operaciones[operacion - 1]);
                 printf("Cantidad de elementos: %d\n", cantidadElementos[cantidad - 1]);
                 printf("Tiempo de ejecucion: %f segundos\n\n", tiempoTotal);
-                printf("Memoria usada: %f KB\n\n", (double)memoriaUsada);
+                printf("Memoria usada: %.6f KB\n\n", (double)memoriaUsada);
                 printf("----------------------------------------\n");
 
                 break;          
