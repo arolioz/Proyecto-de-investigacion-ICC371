@@ -124,3 +124,69 @@ void inorder(BINARY_TREE *tree)
         printf("\n");
     }
 }
+
+TREE_NODE *min_value_node(TREE_NODE *node)
+{
+    TREE_NODE *current = node;
+
+    while (current != NULL && current->left != NULL)
+        current = current->left;
+
+    return current;
+}
+
+
+TREE_NODE *delete_node(TREE_NODE *root, int value)
+{
+    if (root == NULL)
+        return NULL;
+
+    if (value < root->value)
+    {
+        root->left = delete_node(root->left, value);
+    }
+    else if (value > root->value)
+    {
+        root->right = delete_node(root->right, value);
+    }
+    else
+    {
+        // Caso 1: sin hijo izquierdo
+        if (root->left == NULL)
+        {
+            TREE_NODE *temp = root->right;
+            free(root);
+            return temp;
+        }
+
+        // Caso 2: sin hijo derecho
+        if (root->right == NULL)
+        {
+            TREE_NODE *temp = root->left;
+            free(root);
+            return temp;
+        }
+
+        // Caso 3: dos hijos
+        TREE_NODE *temp = min_value_node(root->right);
+
+        root->value = temp->value;
+
+        root->right = delete_node(root->right, temp->value);
+    }
+
+    return root;
+}
+
+int delete_tree(BINARY_TREE *tree, int value)
+{
+    if (tree == NULL)
+        return 0;
+
+    if (!search_tree(tree, value))
+        return 0;
+
+    tree->root = delete_node(tree->root, value);
+
+    return 1;
+}
