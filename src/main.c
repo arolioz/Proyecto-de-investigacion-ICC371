@@ -3,6 +3,7 @@
 #include "Estructures/LinkedList.h"
 #include "Estructures/hash_table.h"
 #include "Estructures/Array.h"
+#include "Estructures/Stack.h"
 
 #include <time.h>
 
@@ -201,22 +202,21 @@ int main(void){
 
             case 5:
                 printf("Pila\n");
-
-                //printf("Tabla Hash\n");
                 
-                //LINKED_LIST *list = create_linkedList(cantidadElementos[cantidad - 1]);
-
+                STACK *pila = create_stack(cantidadElementos[cantidad - 1]);
+                int value;
                 inicio = clock();
 
                 if (operacion == 1) {
-                    
+                    push(pila, 17);
                 }
                 if (operacion == 2) {
-                     
+                    peek(pila, &value);
                 } 
                 if (operacion == 3) {
-                    
+                    pop(pila, &value);
                 }
+
                 fin = clock();
                 tiempoTotal = (double)(fin - inicio) / CLOCKS_PER_SEC;
 
