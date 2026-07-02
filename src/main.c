@@ -8,6 +8,10 @@
 #include "Estructures/Queue.h"
 
 #include <time.h>
+#include <windows.h>
+#include <psapi.h>
+
+long obtener_memoria_kb();
 
 void menuEstructuras();
 
@@ -37,6 +41,7 @@ int main(void){
     int cantidadElementos[] = {1000, 50000, 250000, 500000, 1000000};
     char *operaciones[] = {"Insercion", "Busqueda", "Eliminacion"};
     
+    long memoriaInicial, memoriaFinal, memoriaUsada;
 
     do {
 
@@ -79,9 +84,12 @@ int main(void){
                 ARRAY *arreglo = create_array(cantidadElementos[cantidad - 1]);
 
                 inicio = clock();
+                memoriaInicial = obtener_memoria_kb();
 
                 if (operacion == 1) {
+                    
                     insert_array(arreglo, 2, 15);
+
                 }
                 if (operacion == 2) {
                     int index = search_array(arreglo, cantidadElementos[cantidad - 1]);
@@ -97,11 +105,14 @@ int main(void){
 
                 }
                 fin = clock();
+                memoriaFinal = obtener_memoria_kb();
+                memoriaUsada = memoriaFinal - memoriaInicial;
                 tiempoTotal = (double)(fin - inicio) / CLOCKS_PER_SEC;
 
                 printf("\nOperacion: %s\n", operaciones[operacion - 1]);
                 printf("Cantidad de elementos: %d\n", cantidadElementos[cantidad - 1]);
-                printf("Tiempo de ejecucion: %f segundos\n\n", tiempoTotal);
+                printf("Tiempo de ejecucion: %f segundos\n", tiempoTotal);
+                printf("Memoria usada: %ld KB\n\n", memoriaUsada);
                 printf("----------------------------------------\n");
 
                 break;
@@ -180,6 +191,7 @@ int main(void){
                 BINARY_TREE *arbol = create_tree(cantidadElementos[cantidad - 1]);
 
                 inicio = clock();
+                memoriaInicial = obtener_memoria_kb();
 
                 inorder(arbol);
                 if (operacion == 1) {
@@ -198,9 +210,13 @@ int main(void){
                 fin = clock();
                 tiempoTotal = (double)(fin - inicio) / CLOCKS_PER_SEC;
 
+                memoriaFinal = obtener_memoria_kb();
+                memoriaUsada = memoriaFinal - memoriaInicial;
+
                 printf("\nOperacion: %s\n", operaciones[operacion - 1]);
                 printf("Cantidad de elementos: %d\n", cantidadElementos[cantidad - 1]);
                 printf("Tiempo de ejecucion: %f segundos\n\n", tiempoTotal);
+                printf("Memoria usada: %ld KB\n\n", memoriaUsada);
                 printf("----------------------------------------\n");
 
                 break;          
@@ -293,4 +309,11 @@ void menuEstructuras() {
         printf("6. Cola\n");
         printf("7. Salir\n");
         printf("Seleccione la estructura de datos: ");
+}
+
+long obtener_memoria_kb() {
+    PROCESS_MEMORY_COUNTERS pmc;
+    GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc));
+    // Dividimos entre 1024 para convertir los Bytes del sistema a Kilobytes
+    return (long)(pmc.WorkingSetSize / 1024); 
 }
