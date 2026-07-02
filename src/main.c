@@ -4,6 +4,8 @@
 #include "Estructures/hash_table.h"
 #include "Estructures/Array.h"
 #include "Estructures/Stack.h"
+#include "Estructures/binary_tree.h"
+#include "Estructures/Queue.h"
 
 #include <time.h>
 
@@ -175,16 +177,16 @@ int main(void){
             case 4:
                 printf("Arbol Binario de Busqueda (BST)\n");
 
-                //printf("Tabla Hash\n");
-                
-                //LINKED_LIST *list = create_linkedList(cantidadElementos[cantidad - 1]);
+                BINARY_TREE *arbol = create_tree(cantidadElementos[cantidad - 1]);
 
                 inicio = clock();
 
                 if (operacion == 1) {
+                    insert_tree(arbol, 17);
                     
                 }
                 if (operacion == 2) {
+                    search_tree(arbol, 17);
                      
                 } 
                 if (operacion == 3) {
@@ -228,21 +230,24 @@ int main(void){
                 break;          
 
             case 6:
+            {
                 printf("Cola\n");
-
-                printf("Tabla Hash\n");
                 
-                //LINKED_LIST *list = create_linkedList(cantidadElementos[cantidad - 1]);
-
+                QUEUE *cola = create_queue(cantidadElementos[cantidad - 1]);
+                int value;
                 inicio = clock();
 
                 if (operacion == 1) {
+                    enqueue(cola, 17);
+
                     
                 }
                 if (operacion == 2) {
+                    peek_queue(cola, &value);
                      
                 } 
                 if (operacion == 3) {
+                    dequeue(cola, &value);
                     
                 }
                 fin = clock();
@@ -254,7 +259,7 @@ int main(void){
                 printf("----------------------------------------\n");
                 
                 break;  
-
+            }
             case 7:
                 printf("Saliendo del menu...\n");
                 break;
