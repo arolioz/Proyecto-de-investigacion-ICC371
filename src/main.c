@@ -216,7 +216,7 @@ int main(void){
                 printf("\nOperacion: %s\n", operaciones[operacion - 1]);
                 printf("Cantidad de elementos: %d\n", cantidadElementos[cantidad - 1]);
                 printf("Tiempo de ejecucion: %f segundos\n\n", tiempoTotal);
-                printf("Memoria usada: %ld KB\n\n", memoriaUsada);
+                printf("Memoria usada: %f KB\n\n", (double)memoriaUsada);
                 printf("----------------------------------------\n");
 
                 break;          
@@ -315,5 +315,5 @@ long obtener_memoria_kb() {
     PROCESS_MEMORY_COUNTERS pmc;
     GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc));
     // Dividimos entre 1024 para convertir los Bytes del sistema a Kilobytes
-    return (long)(pmc.WorkingSetSize / 1024); 
+    return (double)(pmc.WorkingSetSize / 1024); 
 }
