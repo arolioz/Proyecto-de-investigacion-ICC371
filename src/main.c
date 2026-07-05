@@ -194,7 +194,7 @@ int main(void){
                 inicio = clock();
                 memoriaInicial = obtener_memoria_kb();
 
-                inorder(arbol);
+                
                 if (operacion == 1) {
                     insert_tree(arbol, 17);
                     
