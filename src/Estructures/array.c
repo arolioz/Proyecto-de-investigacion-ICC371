@@ -16,7 +16,6 @@ ARRAY *create_array(int amount)
 
     array->data = malloc(sizeof(int) * amount);
 
-
     if(array->data == NULL)
     {
         free(array);

@@ -18,7 +18,17 @@ LINKED_LIST *create_linkedList(int amount)
 
     for (int i = 0; i < amount; i++)
     {
-        insertar_linkedList(list, i+1);
+        NODE *newNode = (NODE *)malloc(sizeof(NODE));
+
+        if (newNode == NULL)
+        {
+            free_linkedList(list);
+            return NULL;
+        }
+
+        newNode->value = i + 1;
+        newNode->next = list->head;
+        list->head = newNode;
     }
 
     return list;
