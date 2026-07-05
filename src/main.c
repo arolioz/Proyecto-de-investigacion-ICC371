@@ -133,11 +133,11 @@ int main(void){
                     printf("El valor %d se encuentra en el índice: %d\n",1, index); 
                 } 
                 if (operacion == 3) {
-                    int result = eliminar_linkedList(list, 15);
+                    int result = eliminar_linkedList(list, 1);
                     if (result) {
-                        printf("El valor 15 ha sido eliminado de la lista.\n");
+                        printf("El valor 1 ha sido eliminado de la lista.\n");
                     } else {
-                        printf("El valor 15 no se encuentra en la lista.\n");
+                        printf("El valor 1 no se encuentra en la lista.\n");
                     }
 
                 }
