@@ -68,7 +68,7 @@ int search_array(ARRAY *array, int value)
     for(int i = 0; i < array->size; i++)
     {
         if(array->data[i] == value)
-            return 1;
+            return i;
     }
 
 

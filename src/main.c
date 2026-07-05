@@ -94,6 +94,7 @@ int main(void){
                 if (operacion == 2) {
                     int index = search_array(arreglo, cantidadElementos[cantidad - 1]);
                     printf("El valor %d se encuentra en el índice: %d\n", cantidadElementos[cantidad - 1], index); 
+                    
                 } 
                 if (operacion == 3) {
                     int result = delete_array(arreglo, 1);
