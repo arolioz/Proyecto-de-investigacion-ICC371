@@ -169,11 +169,11 @@ int main(void){
                      
                 } 
                 if (operacion == 3) {
-                    int result = delete_hash(lista, 15);
+                    int result = delete_hash(lista, 1);
                     if (result) {
-                        printf("El valor 15 ha sido eliminado de la tabla hash.\n");
+                        printf("El valor 1 ha sido eliminado de la tabla hash.\n");
                     } else {
-                        printf("El valor 15 no se encuentra en la tabla hash.\n");
+                        printf("El valor 1 no se encuentra en la tabla hash.\n");
                     }
                     
                 }
