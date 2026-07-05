@@ -32,5 +32,5 @@ void print_hash(HASH_TABLE *hash);
 
 void free_hash(HASH_TABLE *hash);
 
-
+void insert_hash_front(HASH_TABLE *hash, int value);
 #endif

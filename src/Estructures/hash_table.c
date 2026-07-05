@@ -31,7 +31,7 @@ HASH_TABLE *create_hash_table(int amount)
     // Agregar valores iniciales de 1 hasta amount
     for(int i = 1; i <= amount; i++)
     {
-        insert_hash(hash, i);
+        insert_hash_front(hash, i);
     }
 
 
@@ -42,27 +42,34 @@ HASH_TABLE *create_hash_table(int amount)
 // Insertar un valor
 int insert_hash(HASH_TABLE *hash, int value)
 {
-    if(hash == NULL)
+    if (hash == NULL)
         return 0;
-
 
     int index = hash_function(value);
 
-
     HASH_NODE *newNode = malloc(sizeof(HASH_NODE));
-
-
-    if(newNode == NULL)
+    if (newNode == NULL)
         return 0;
 
-
     newNode->value = value;
+    newNode->next = NULL;
 
-    // Manejo de colisiones
-    newNode->next = hash->table[index];
+    // Si el bucket está vacío
+    if (hash->table[index] == NULL)
+    {
+        hash->table[index] = newNode;
+        return 1;
+    }
 
-    hash->table[index] = newNode;
+    // Si no está vacío, ir al final
+    HASH_NODE *current = hash->table[index];
 
+    while (current->next != NULL)
+    {
+        current = current->next;
+    }
+
+    current->next = newNode;
 
     return 1;
 }
@@ -186,4 +193,15 @@ void free_hash(HASH_TABLE *hash)
 
 
     free(hash);
+}
+
+void insert_hash_front(HASH_TABLE *hash, int value)
+{
+    int index = hash_function(value);
+
+    HASH_NODE *newNode = malloc(sizeof(HASH_NODE));
+    newNode->value = value;
+
+    newNode->next = hash->table[index];
+    hash->table[index] = newNode;
 }

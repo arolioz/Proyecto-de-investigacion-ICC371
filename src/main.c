@@ -158,8 +158,7 @@ int main(void){
                 inicio = clock();
 
                 if (operacion == 1) {
-                    print_hash(lista);
-                    print_hash(lista);
+                    insert_hash(lista,cantidadElementos[cantidad - 1]);
 
                 }
                 if (operacion == 2) {
@@ -188,7 +187,7 @@ int main(void){
                 break;
             case 4:
                 printf("Arbol Binario de Busqueda (BST)\n");
-
+                 
                 BINARY_TREE *arbol = create_tree(cantidadElementos[cantidad - 1]);
 
                 inicio = clock();
