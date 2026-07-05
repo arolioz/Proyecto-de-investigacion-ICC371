@@ -123,3 +123,20 @@ void mostrar_linkedList(LINKED_LIST *lista){
     }
     printf("\n");
 }
+
+void free_linkedList(LINKED_LIST *list)
+{
+    if (list == NULL)
+        return;
+
+    NODE *current = list->head;
+
+    while (current != NULL)
+    {
+        NODE *temp = current;
+        current = current->next;
+        free(temp);
+    }
+
+    free(list);
+}

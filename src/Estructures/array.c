@@ -49,7 +49,7 @@ int insert_array(ARRAY *array, int index, int value)
 
     if (temp == NULL)
         return 0;
-
+    
     array->data = temp;
     array->data[array->size] = value;
     array->size++;

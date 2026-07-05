@@ -11,7 +11,7 @@
 #include <windows.h>
 #include <psapi.h>
 
-long obtener_memoria_kb();
+double obtener_memoria_kb();
 
 void menuEstructuras();
 
@@ -114,7 +114,7 @@ int main(void){
                 printf("Tiempo de ejecucion: %f segundos\n", tiempoTotal);
                 printf("Memoria usada: %.6f KB\n\n", memoriaUsada);
                 printf("----------------------------------------\n");
-
+                free_array(arreglo);
                 break;
             case 2:
                 printf("Listas entrelazadas\n");
@@ -147,6 +147,7 @@ int main(void){
                 printf("Cantidad de elementos: %d\n", cantidadElementos[cantidad - 1]);
                 printf("Tiempo de ejecucion: %f segundos\n\n", tiempoTotal);
                 printf("----------------------------------------\n");
+                free_linkedList(list);
                 break;
                 
             case 3:
@@ -183,7 +184,7 @@ int main(void){
                 printf("Cantidad de elementos: %d\n", cantidadElementos[cantidad - 1]);
                 printf("Tiempo de ejecucion: %.6f segundos\n\n", tiempoTotal);
                 printf("----------------------------------------\n");
-
+                free_hash(lista);
                 break;
             case 4:
                 printf("Arbol Binario de Busqueda (BST)\n");
@@ -216,9 +217,9 @@ int main(void){
                 printf("\nOperacion: %s\n", operaciones[operacion - 1]);
                 printf("Cantidad de elementos: %d\n", cantidadElementos[cantidad - 1]);
                 printf("Tiempo de ejecucion: %f segundos\n\n", tiempoTotal);
-                printf("Memoria usada: %.6f KB\n\n", (double)memoriaUsada);
+                printf("Memoria usada: %.6f KB\n\n", memoriaUsada);
                 printf("----------------------------------------\n");
-
+                free_tree(arbol);
                 break;          
 
             case 5:
@@ -245,7 +246,7 @@ int main(void){
                 printf("Cantidad de elementos: %d\n", cantidadElementos[cantidad - 1]);
                 printf("Tiempo de ejecucion: %f segundos\n\n", tiempoTotal);
                 printf("----------------------------------------\n");
-
+                free_stack(pila);
                 break;          
 
             case 6:
@@ -276,7 +277,7 @@ int main(void){
                 printf("Cantidad de elementos: %d\n", cantidadElementos[cantidad - 1]);
                 printf("Tiempo de ejecucion: %f segundos\n\n", tiempoTotal);
                 printf("----------------------------------------\n");
-                
+                free_queue(cola);
                 break;  
             }
             case 7:
@@ -311,7 +312,7 @@ void menuEstructuras() {
         printf("Seleccione la estructura de datos: ");
 }
 
-long obtener_memoria_kb() {
+double obtener_memoria_kb() {
     PROCESS_MEMORY_COUNTERS pmc;
     GetProcessMemoryInfo(GetCurrentProcess(), &pmc, sizeof(pmc));
     // Dividimos entre 1024 para convertir los Bytes del sistema a Kilobytes

@@ -1,0 +1,1290 @@
+--------------------------------------------------------------------------------
+Command:            ./main
+Massif arguments:   (none)
+ms_print arguments: massif.out.770
+--------------------------------------------------------------------------------
+
+
+    KB
+40.79^                                                                       :
+     |                                                                     :::
+     |                                                                  :@::::
+     |                                                                :::@::::
+     |                                                              :@:::@::::
+     |                                                            @::@:::@::::
+     |                                                         :::@::@:::@::::
+     |                                                      ::@:: @::@:::@::::
+     |                                                   :::::@:: @::@:::@::::
+     |                                                 :::::::@:: @::@:::@::::
+     |                                               :::::::::@:: @::@:::@::::
+     |                                           :::::::::::::@:: @::@:::@::::
+     |                                         ::: :::::::::::@:: @::@:::@::::
+     |                                       ::::: :::::::::::@:: @::@:::@::::
+     |                                    :::::::: :::::::::::@:: @::@:::@::::
+     |                                 :::: :::::: :::::::::::@:: @::@:::@::::
+     |                               :::::: :::::: :::::::::::@:: @::@:::@::::
+     |                             @::::::: :::::: :::::::::::@:: @::@:::@::::
+     |                          :@@@::::::: :::::: :::::::::::@:: @::@:::@::::
+     |                        :::@ @::::::: :::::: :::::::::::@:: @::@:::@::::
+   0 +----------------------------------------------------------------------->ki
+     0                                                                   498.3
+
+Number of snapshots: 57
+ Detailed snapshots: [7, 8, 37, 40, 44, 49]
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  0              0                0                0             0            0
+  1        152,108            1,032            1,024             8            0
+  2        156,529            2,064            2,048            16            0
+  3        168,477            2,088            2,056            32            0
+  4        175,867            3,088            2,656           432            0
+  5        184,864            4,128            3,280           848            0
+  6        189,388            4,648            3,592         1,056            0
+  7        196,744            5,528            4,120         1,408            0
+74.53% (4,120B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->37.34% (2,064B) 0x10A672: create_node (binary_tree.c:8)
+| ->37.34% (2,064B) 0x10A71F: insert_node (binary_tree.c:40)
+|   ->19.10% (1,056B) 0x10A741: insert_node (binary_tree.c:45)
+|   | ->09.99% (552B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | ->05.21% (288B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | ->02.60% (144B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.74% (96B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.30% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | | ->01.30% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | | | | | |   
+|   | | | | | ->00.43% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | | 
+|   | | | | ->00.87% (48B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->02.17% (120B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.74% (96B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.30% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | | ->01.30% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | |   ->01.30% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | | | | | |     
+|   | | | | | ->00.43% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | | 
+|   | | | | ->00.43% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->00.43% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->04.34% (240B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | ->03.04% (168B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->02.17% (120B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.74% (96B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | | ->01.30% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | | | ->01.30% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | | | | | | |   
+|   | | | | | | ->00.43% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | | | 
+|   | | | | | ->00.43% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | | 
+|   | | | | ->00.87% (48B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->01.30% (72B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | |   ->01.30% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | | |     
+|   | | ->00.43% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | 
+|   | ->08.68% (480B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | ->05.21% (288B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | ->03.47% (192B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->02.60% (144B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.74% (96B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | | ->01.30% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | | | ->01.30% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | | | | | | |   
+|   | | | | | | ->00.43% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | | | 
+|   | | | | | ->00.87% (48B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | | 
+|   | | | | ->00.87% (48B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->01.74% (96B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | |   ->01.30% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | |   | ->01.30% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | |   |   ->01.30% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | |   |     ->01.30% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | | |   |       
+|   | | |   ->00.43% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | |   
+|   | | ->03.47% (192B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | |   ->02.17% (120B) 0x10A741: insert_node (binary_tree.c:45)
+|   | |   | ->01.74% (96B) 0x10A741: insert_node (binary_tree.c:45)
+|   | |   | | ->01.30% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | |   | | | ->01.30% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | |   | | |   ->01.30% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | |   | | |     
+|   | |   | | ->00.43% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | |   | | 
+|   | |   | ->00.43% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | |   | 
+|   | |   ->01.30% (72B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | |     ->01.30% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | |       
+|   | ->00.43% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->17.80% (984B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | ->09.99% (552B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | ->06.08% (336B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | ->03.91% (216B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->02.60% (144B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.74% (96B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | | ->01.30% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | | | ->01.30% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | | | | | | |   
+|   | | | | | | ->00.43% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | | | 
+|   | | | | | ->00.87% (48B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | | 
+|   | | | | ->01.30% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | | | |   
+|   | | | ->02.17% (120B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | |   ->01.74% (96B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | |   | ->01.30% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | |   | | ->01.30% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | |   | |   ->01.30% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | | |   | |     
+|   | | |   | ->00.43% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | |   | 
+|   | | |   ->00.43% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | |   
+|   | | ->03.91% (216B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | |   ->02.60% (144B) 0x10A741: insert_node (binary_tree.c:45)
+|   | |   | ->02.17% (120B) 0x10A741: insert_node (binary_tree.c:45)
+|   | |   | | ->01.74% (96B) 0x10A741: insert_node (binary_tree.c:45)
+|   | |   | | | ->01.30% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | |   | | | | ->01.30% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | |   | | | |   
+|   | |   | | | ->00.43% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | |   | | | 
+|   | |   | | ->00.43% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | |   | | 
+|   | |   | ->00.43% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | |   | 
+|   | |   ->01.30% (72B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | |     ->01.30% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | |       
+|   | ->07.81% (432B) 0x10A76B: insert_node (binary_tree.c:49)
+|   |   ->04.34% (240B) 0x10A741: insert_node (binary_tree.c:45)
+|   |   | ->03.04% (168B) 0x10A741: insert_node (binary_tree.c:45)
+|   |   | | ->02.17% (120B) 0x10A741: insert_node (binary_tree.c:45)
+|   |   | | | ->01.74% (96B) 0x10A741: insert_node (binary_tree.c:45)
+|   |   | | | | ->01.30% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   |   | | | | | ->01.30% (72B) in 2 places, all below massif's threshold (1.00%)
+|   |   | | | | |   
+|   |   | | | | ->00.43% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   | | | | 
+|   |   | | | ->00.43% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   | | | 
+|   |   | | ->00.87% (48B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   | | 
+|   |   | ->01.30% (72B) 0x10A76B: insert_node (binary_tree.c:49)
+|   |   |   ->01.30% (72B) in 2 places, all below massif's threshold (1.00%)
+|   |   |     
+|   |   ->03.47% (192B) 0x10A76B: insert_node (binary_tree.c:49)
+|   |     ->02.17% (120B) 0x10A741: insert_node (binary_tree.c:45)
+|   |     | ->01.74% (96B) 0x10A741: insert_node (binary_tree.c:45)
+|   |     | | ->01.30% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   |     | | | ->01.30% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   |     | | |   ->01.30% (72B) in 2 places, all below massif's threshold (1.00%)
+|   |     | | |     
+|   |     | | ->00.43% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     | | 
+|   |     | ->00.43% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     | 
+|   |     ->01.30% (72B) 0x10A76B: insert_node (binary_tree.c:49)
+|   |       ->01.30% (72B) in 2 places, all below massif's threshold (1.00%)
+|   |         
+|   ->00.43% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->37.05% (2,048B) 0x48DD1B4: _IO_file_doallocate (filedoalloc.c:101)
+| ->37.05% (2,048B) 0x48ED523: _IO_doallocbuf (genops.c:347)
+|   ->18.52% (1,024B) 0x48EA883: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:486)
+|   | ->18.52% (1,024B) 0x48ED5D1: _IO_default_uflow (genops.c:362)
+|   |   ->18.52% (1,024B) 0x48C41C3: __vfscanf_internal (vfscanf-internal.c:676)
+|   |     ->18.52% (1,024B) 0x48B7EC5: __isoc99_scanf (isoc99_scanf.c:30)
+|   |       ->18.52% (1,024B) 0x109312: main (main.c:44)
+|   |         
+|   ->18.52% (1,024B) 0x48EAF8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->18.52% (1,024B) 0x48EBAAE: _IO_new_file_xsputn (fileops.c:1244)
+|       ->18.52% (1,024B) 0x48EBAAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->18.52% (1,024B) 0x48DFC5C: puts (ioputs.c:40)
+|           ->18.52% (1,024B) 0x109DD1: menuEstructuras (main.c:288)
+|             ->18.52% (1,024B) 0x1092F4: main (main.c:43)
+|               
+->00.14% (8B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  8        206,471            6,648            4,792         1,856            0
+72.08% (4,792B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->41.16% (2,736B) 0x10A672: create_node (binary_tree.c:8)
+| ->41.16% (2,736B) 0x10A71F: insert_node (binary_tree.c:40)
+|   ->20.58% (1,368B) 0x10A741: insert_node (binary_tree.c:45)
+|   | ->10.11% (672B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | ->05.05% (336B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | ->02.53% (168B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.44% (96B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.08% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | | ->01.08% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | | | | | |   
+|   | | | | | ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | | 
+|   | | | | ->01.08% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | | | |   
+|   | | | ->02.17% (144B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.44% (96B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.08% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | | ->01.08% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | |   ->01.08% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | | | | | |     
+|   | | | | | ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | | 
+|   | | | | ->00.72% (48B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->04.69% (312B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | ->02.89% (192B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.81% (120B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.44% (96B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | | ->01.08% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | | | ->01.08% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | | | | | | |   
+|   | | | | | | ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | | | 
+|   | | | | | ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | | 
+|   | | | | ->01.08% (72B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | |   ->01.08% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | | | |     
+|   | | | ->01.81% (120B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | |   ->01.44% (96B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | |   | ->01.08% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | |   | | ->01.08% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | |   | |   ->01.08% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | | |   | |     
+|   | | |   | ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | |   | 
+|   | | |   ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | |   
+|   | | ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | 
+|   | ->10.11% (672B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | ->05.42% (360B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | ->03.25% (216B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->02.17% (144B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.44% (96B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | | ->01.08% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | | | ->01.08% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | | | | | | |   
+|   | | | | | | ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | | | 
+|   | | | | | ->00.72% (48B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | | 
+|   | | | | ->01.08% (72B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | |   ->01.08% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | | | |     
+|   | | | ->02.17% (144B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | |   ->01.44% (96B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | |   | ->01.08% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | |   | | ->01.08% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | |   | |   ->01.08% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | | |   | |     
+|   | | |   | ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | |   | 
+|   | | |   ->00.72% (48B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | |   
+|   | | ->04.69% (312B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | |   ->02.89% (192B) 0x10A741: insert_node (binary_tree.c:45)
+|   | |   | ->01.81% (120B) 0x10A741: insert_node (binary_tree.c:45)
+|   | |   | | ->01.44% (96B) 0x10A741: insert_node (binary_tree.c:45)
+|   | |   | | | ->01.08% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | |   | | | | ->01.08% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | |   | | | |   
+|   | |   | | | ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | |   | | | 
+|   | |   | | ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | |   | | 
+|   | |   | ->01.08% (72B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | |   |   ->01.08% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | |   |     
+|   | |   ->01.81% (120B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | |     ->01.44% (96B) 0x10A741: insert_node (binary_tree.c:45)
+|   | |     | ->01.08% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | |     | | ->01.08% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | |     | |   ->01.08% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | |     | |     
+|   | |     | ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | |     | 
+|   | |     ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | |     
+|   | ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->20.22% (1,344B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | ->10.47% (696B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | ->05.78% (384B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | ->03.61% (240B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->02.17% (144B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.44% (96B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | | ->01.08% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | | | ->01.08% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | | | | | | |   
+|   | | | | | | ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | | | 
+|   | | | | | ->00.72% (48B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | | 
+|   | | | | ->01.08% (72B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.08% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->02.17% (144B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | |   ->01.44% (96B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | |   | ->01.08% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | |   | | ->01.08% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | |   | |   ->01.08% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | | |   | |     
+|   | | |   | ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | |   | 
+|   | | |   ->00.72% (48B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | |   
+|   | | ->04.69% (312B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | |   ->02.89% (192B) 0x10A741: insert_node (binary_tree.c:45)
+|   | |   | ->01.81% (120B) 0x10A741: insert_node (binary_tree.c:45)
+|   | |   | | ->01.44% (96B) 0x10A741: insert_node (binary_tree.c:45)
+|   | |   | | | ->01.08% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | |   | | | | ->01.08% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | |   | | | |   
+|   | |   | | | ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | |   | | | 
+|   | |   | | ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | |   | | 
+|   | |   | ->01.08% (72B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | |   |   ->01.08% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | |   |     
+|   | |   ->01.81% (120B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | |     ->01.44% (96B) 0x10A741: insert_node (binary_tree.c:45)
+|   | |     | ->01.08% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | |     | | ->01.08% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   | |     | |   ->01.08% (72B) in 2 places, all below massif's threshold (1.00%)
+|   | |     | |     
+|   | |     | ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | |     | 
+|   | |     ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | |     
+|   | ->09.75% (648B) 0x10A76B: insert_node (binary_tree.c:49)
+|   |   ->05.42% (360B) 0x10A741: insert_node (binary_tree.c:45)
+|   |   | ->03.25% (216B) 0x10A741: insert_node (binary_tree.c:45)
+|   |   | | ->02.17% (144B) 0x10A741: insert_node (binary_tree.c:45)
+|   |   | | | ->01.44% (96B) 0x10A741: insert_node (binary_tree.c:45)
+|   |   | | | | ->01.08% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   |   | | | | | ->01.08% (72B) in 2 places, all below massif's threshold (1.00%)
+|   |   | | | | |   
+|   |   | | | | ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   | | | | 
+|   |   | | | ->00.72% (48B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   | | | 
+|   |   | | ->01.08% (72B) 0x10A76B: insert_node (binary_tree.c:49)
+|   |   | |   ->01.08% (72B) in 2 places, all below massif's threshold (1.00%)
+|   |   | |     
+|   |   | ->02.17% (144B) 0x10A76B: insert_node (binary_tree.c:49)
+|   |   |   ->01.44% (96B) 0x10A741: insert_node (binary_tree.c:45)
+|   |   |   | ->01.08% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   |   |   | | ->01.08% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   |   |   | |   ->01.08% (72B) in 2 places, all below massif's threshold (1.00%)
+|   |   |   | |     
+|   |   |   | ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   |   | 
+|   |   |   ->00.72% (48B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |   |   
+|   |   ->04.33% (288B) 0x10A76B: insert_node (binary_tree.c:49)
+|   |     ->02.89% (192B) 0x10A741: insert_node (binary_tree.c:45)
+|   |     | ->01.81% (120B) 0x10A741: insert_node (binary_tree.c:45)
+|   |     | | ->01.44% (96B) 0x10A741: insert_node (binary_tree.c:45)
+|   |     | | | ->01.08% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   |     | | | | ->01.08% (72B) in 2 places, all below massif's threshold (1.00%)
+|   |     | | | |   
+|   |     | | | ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     | | | 
+|   |     | | ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |     | | 
+|   |     | ->01.08% (72B) 0x10A76B: insert_node (binary_tree.c:49)
+|   |     |   ->01.08% (72B) in 2 places, all below massif's threshold (1.00%)
+|   |     |     
+|   |     ->01.44% (96B) 0x10A76B: insert_node (binary_tree.c:49)
+|   |       ->01.08% (72B) 0x10A741: insert_node (binary_tree.c:45)
+|   |       | ->01.08% (72B) in 2 places, all below massif's threshold (1.00%)
+|   |       |   
+|   |       ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   |       
+|   ->00.36% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->30.81% (2,048B) 0x48DD1B4: _IO_file_doallocate (filedoalloc.c:101)
+| ->30.81% (2,048B) 0x48ED523: _IO_doallocbuf (genops.c:347)
+|   ->15.40% (1,024B) 0x48EA883: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:486)
+|   | ->15.40% (1,024B) 0x48ED5D1: _IO_default_uflow (genops.c:362)
+|   |   ->15.40% (1,024B) 0x48C41C3: __vfscanf_internal (vfscanf-internal.c:676)
+|   |     ->15.40% (1,024B) 0x48B7EC5: __isoc99_scanf (isoc99_scanf.c:30)
+|   |       ->15.40% (1,024B) 0x109312: main (main.c:44)
+|   |         
+|   ->15.40% (1,024B) 0x48EAF8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->15.40% (1,024B) 0x48EBAAE: _IO_new_file_xsputn (fileops.c:1244)
+|       ->15.40% (1,024B) 0x48EBAAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->15.40% (1,024B) 0x48DFC5C: puts (ioputs.c:40)
+|           ->15.40% (1,024B) 0x109DD1: menuEstructuras (main.c:288)
+|             ->15.40% (1,024B) 0x1092F4: main (main.c:43)
+|               
+->00.12% (8B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+  9        214,827            7,648            5,392         2,256            0
+ 10        221,506            8,408            5,848         2,560            0
+ 11        231,594            9,568            6,544         3,024            0
+ 12        238,969           10,448            7,072         3,376            0
+ 13        243,312           10,928            7,360         3,568            0
+ 14        249,826           11,688            7,816         3,872            0
+ 15        254,148           12,168            8,104         4,064            0
+ 16        261,208           13,048            8,632         4,416            0
+ 17        271,612           14,248            9,352         4,896            0
+ 18        277,000           14,888            9,736         5,152            0
+ 19        282,268           15,488           10,096         5,392            0
+ 20        288,529           16,208           10,528         5,680            0
+ 21        293,505           16,768           10,864         5,904            0
+ 22        300,197           17,568           11,344         6,224            0
+ 23        305,793           18,208           11,728         6,480            0
+ 24        310,974           18,808           12,088         6,720            0
+ 25        321,049           19,968           12,784         7,184            0
+ 26        327,394           20,688           13,216         7,472            0
+ 27        337,697           21,848           13,912         7,936            0
+ 28        344,236           22,688           14,416         8,272            0
+ 29        353,608           23,768           15,064         8,704            0
+ 30        358,885           24,368           15,424         8,944            0
+ 31        366,373           25,248           15,952         9,296            0
+ 32        371,668           25,848           16,312         9,536            0
+ 33        376,872           26,448           16,672         9,776            0
+ 34        382,209           27,048           17,032        10,016            0
+ 35        387,403           27,688           17,416        10,272            0
+ 36        395,359           28,608           17,968        10,640            0
+ 37        400,672           29,208           18,328        10,880            0
+62.75% (18,328B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->55.71% (16,272B) 0x10A672: create_node (binary_tree.c:8)
+| ->55.71% (16,272B) 0x10A71F: insert_node (binary_tree.c:40)
+|   ->28.35% (8,280B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | ->14.38% (4,200B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | ->07.31% (2,136B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | ->03.70% (1,080B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.89% (552B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.89% (552B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.73% (504B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.73% (504B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.08% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.53% (1,032B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.89% (552B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.89% (552B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.56% (456B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.56% (456B) in 2 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.08% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->00.08% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->06.98% (2,040B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | ->03.70% (1,080B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.89% (552B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.89% (552B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.73% (504B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.73% (504B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.08% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.20% (936B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.73% (504B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.73% (504B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.48% (432B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | |   ->01.48% (432B) in 2 places, all below massif's threshold (1.00%)
+|   | | | |     
+|   | | | ->00.08% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->00.08% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | 
+|   | ->13.89% (4,056B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | ->07.15% (2,088B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | ->03.70% (1,080B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.89% (552B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.89% (552B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.73% (504B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.73% (504B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.08% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.37% (984B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.89% (552B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.89% (552B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.48% (432B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | |   ->01.48% (432B) in 2 places, all below massif's threshold (1.00%)
+|   | | | |     
+|   | | | ->00.08% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->06.74% (1,968B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | |   ->03.53% (1,032B) 0x10A741: insert_node (binary_tree.c:45)
+|   | |   | ->01.89% (552B) 0x10A741: insert_node (binary_tree.c:45)
+|   | |   | | ->01.89% (552B) in 3 places, all below massif's threshold (1.00%)
+|   | |   | |   
+|   | |   | ->01.56% (456B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | |   | | ->01.56% (456B) in 2 places, all below massif's threshold (1.00%)
+|   | |   | |   
+|   | |   | ->00.08% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | |   | 
+|   | |   ->03.20% (936B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | |     ->01.73% (504B) 0x10A741: insert_node (binary_tree.c:45)
+|   | |     | ->01.73% (504B) in 3 places, all below massif's threshold (1.00%)
+|   | |     |   
+|   | |     ->01.48% (432B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | |       ->01.48% (432B) in 2 places, all below massif's threshold (1.00%)
+|   | |         
+|   | ->00.08% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->27.28% (7,968B) 0x10A741: insert_node (binary_tree.c:45)
+|   | ->14.13% (4,128B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | ->07.23% (2,112B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | ->03.70% (1,080B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.89% (552B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.89% (552B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.73% (504B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.73% (504B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.08% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.45% (1,008B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.89% (552B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.89% (552B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.48% (432B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.48% (432B) in 2 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.08% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->00.08% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->06.82% (1,992B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | ->03.62% (1,056B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.89% (552B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.89% (552B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.64% (480B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.64% (480B) in 2 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.08% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.20% (936B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | |   ->01.73% (504B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | |   | ->01.73% (504B) in 3 places, all below massif's threshold (1.00%)
+|   | | |   |   
+|   | | |   ->01.48% (432B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | |     ->01.48% (432B) in 2 places, all below massif's threshold (1.00%)
+|   | | |       
+|   | | ->00.08% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | 
+|   | ->13.06% (3,816B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | ->07.07% (2,064B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | ->03.70% (1,080B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.89% (552B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.89% (552B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.73% (504B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.73% (504B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.08% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.29% (960B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.81% (528B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.81% (528B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.48% (432B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | |   ->01.48% (432B) in 2 places, all below massif's threshold (1.00%)
+|   | | | |     
+|   | | | ->00.08% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->05.92% (1,728B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | ->03.53% (1,032B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.89% (552B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.89% (552B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.56% (456B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.56% (456B) in 2 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.08% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->02.30% (672B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.23% (360B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.23% (360B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.07% (312B) in 2 places, all below massif's threshold (1.00%)
+|   | | | |   
+|   | | | ->00.08% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->00.08% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | 
+|   | ->00.08% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->00.08% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->07.01% (2,048B) 0x48DD1B4: _IO_file_doallocate (filedoalloc.c:101)
+| ->07.01% (2,048B) 0x48ED523: _IO_doallocbuf (genops.c:347)
+|   ->03.51% (1,024B) 0x48EA883: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:486)
+|   | ->03.51% (1,024B) 0x48ED5D1: _IO_default_uflow (genops.c:362)
+|   |   ->03.51% (1,024B) 0x48C41C3: __vfscanf_internal (vfscanf-internal.c:676)
+|   |     ->03.51% (1,024B) 0x48B7EC5: __isoc99_scanf (isoc99_scanf.c:30)
+|   |       ->03.51% (1,024B) 0x109312: main (main.c:44)
+|   |         
+|   ->03.51% (1,024B) 0x48EAF8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->03.51% (1,024B) 0x48EBAAE: _IO_new_file_xsputn (fileops.c:1244)
+|       ->03.51% (1,024B) 0x48EBAAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->03.51% (1,024B) 0x48DFC5C: puts (ioputs.c:40)
+|           ->03.51% (1,024B) 0x109DD1: menuEstructuras (main.c:288)
+|             ->03.51% (1,024B) 0x1092F4: main (main.c:43)
+|               
+->00.03% (8B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 38        408,229           30,088           18,856        11,232            0
+ 39        416,283           31,008           19,408        11,600            0
+ 40        426,336           32,128           20,080        12,048            0
+62.50% (20,080B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->56.10% (18,024B) 0x10A672: create_node (binary_tree.c:8)
+| ->56.10% (18,024B) 0x10A71F: insert_node (binary_tree.c:40)
+|   ->28.69% (9,216B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | ->14.34% (4,608B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | ->07.17% (2,304B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | ->03.59% (1,152B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.79% (576B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.79% (576B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.72% (552B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.72% (552B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.51% (1,128B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.79% (576B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.79% (576B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.64% (528B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.64% (528B) in 2 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->07.10% (2,280B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | ->03.59% (1,152B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.79% (576B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.79% (576B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.72% (552B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.72% (552B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.44% (1,104B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.79% (576B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.79% (576B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.64% (528B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | |   ->01.64% (528B) in 2 places, all below massif's threshold (1.00%)
+|   | | | |     
+|   | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | 
+|   | ->14.27% (4,584B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | ->07.17% (2,304B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | ->03.59% (1,152B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.79% (576B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.79% (576B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.72% (552B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.72% (552B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.51% (1,128B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.79% (576B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.79% (576B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.64% (528B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.64% (528B) in 2 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->07.02% (2,256B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | ->03.59% (1,152B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.79% (576B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.79% (576B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.72% (552B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.72% (552B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.44% (1,104B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | |   ->01.79% (576B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | |   | ->01.79% (576B) in 3 places, all below massif's threshold (1.00%)
+|   | | |   |   
+|   | | |   ->01.64% (528B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | |     ->01.64% (528B) in 2 places, all below massif's threshold (1.00%)
+|   | | |       
+|   | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | 
+|   | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->27.34% (8,784B) 0x10A741: insert_node (binary_tree.c:45)
+|   | ->14.27% (4,584B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | ->07.17% (2,304B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | ->03.59% (1,152B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.79% (576B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.79% (576B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.72% (552B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.72% (552B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.51% (1,128B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.79% (576B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.79% (576B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.64% (528B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.64% (528B) in 2 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->07.02% (2,256B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | ->03.59% (1,152B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.79% (576B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.79% (576B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.72% (552B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.72% (552B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.44% (1,104B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | |   ->01.79% (576B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | |   | ->01.79% (576B) in 3 places, all below massif's threshold (1.00%)
+|   | | |   |   
+|   | | |   ->01.64% (528B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | |     ->01.64% (528B) in 2 places, all below massif's threshold (1.00%)
+|   | | |       
+|   | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | 
+|   | ->13.00% (4,176B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | ->07.10% (2,280B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | ->03.59% (1,152B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.79% (576B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.79% (576B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.72% (552B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.72% (552B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.44% (1,104B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.79% (576B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.79% (576B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.64% (528B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | |   ->01.64% (528B) in 2 places, all below massif's threshold (1.00%)
+|   | | | |     
+|   | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->05.83% (1,872B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | ->03.51% (1,128B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.79% (576B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.79% (576B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.64% (528B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.64% (528B) in 2 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->02.24% (720B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.27% (408B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.27% (408B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.97% (312B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | 
+|   | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->06.37% (2,048B) 0x48DD1B4: _IO_file_doallocate (filedoalloc.c:101)
+| ->06.37% (2,048B) 0x48ED523: _IO_doallocbuf (genops.c:347)
+|   ->03.19% (1,024B) 0x48EA883: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:486)
+|   | ->03.19% (1,024B) 0x48ED5D1: _IO_default_uflow (genops.c:362)
+|   |   ->03.19% (1,024B) 0x48C41C3: __vfscanf_internal (vfscanf-internal.c:676)
+|   |     ->03.19% (1,024B) 0x48B7EC5: __isoc99_scanf (isoc99_scanf.c:30)
+|   |       ->03.19% (1,024B) 0x109312: main (main.c:44)
+|   |         
+|   ->03.19% (1,024B) 0x48EAF8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->03.19% (1,024B) 0x48EBAAE: _IO_new_file_xsputn (fileops.c:1244)
+|       ->03.19% (1,024B) 0x48EBAAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->03.19% (1,024B) 0x48DFC5C: puts (ioputs.c:40)
+|           ->03.19% (1,024B) 0x109DD1: menuEstructuras (main.c:288)
+|             ->03.19% (1,024B) 0x1092F4: main (main.c:43)
+|               
+->00.02% (8B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 41        434,176           33,088           20,656        12,432            0
+ 42        439,357           33,688           21,016        12,672            0
+ 43        444,676           34,288           21,376        12,912            0
+ 44        452,283           35,168           21,904        13,264            0
+62.28% (21,904B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->56.44% (19,848B) 0x10A672: create_node (binary_tree.c:8)
+| ->56.44% (19,848B) 0x10A71F: insert_node (binary_tree.c:40)
+|   ->28.80% (10,128B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | ->14.54% (5,112B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | ->07.37% (2,592B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | ->03.75% (1,320B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.91% (672B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.91% (672B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.77% (624B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.77% (624B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.55% (1,248B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.84% (648B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.84% (648B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.64% (576B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.64% (576B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->07.10% (2,496B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | ->03.62% (1,272B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.91% (672B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.91% (672B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.64% (576B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.64% (576B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.41% (1,200B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.77% (624B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.77% (624B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.57% (552B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.57% (552B) in 2 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | 
+|   | ->14.19% (4,992B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | ->07.23% (2,544B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | ->03.75% (1,320B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.91% (672B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.91% (672B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.77% (624B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.77% (624B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.41% (1,200B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.77% (624B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.77% (624B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.57% (552B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.57% (552B) in 2 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->06.89% (2,424B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | ->03.55% (1,248B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.84% (648B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.84% (648B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.64% (576B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.64% (576B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.34% (1,176B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | |   ->01.77% (624B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | |   | ->01.77% (624B) in 3 places, all below massif's threshold (1.00%)
+|   | | |   |   
+|   | | |   ->01.57% (552B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | |     ->01.57% (552B) in 2 places, all below massif's threshold (1.00%)
+|   | | |       
+|   | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | 
+|   | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->27.57% (9,696B) 0x10A741: insert_node (binary_tree.c:45)
+|   | ->14.33% (5,040B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | ->07.30% (2,568B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | ->03.75% (1,320B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.91% (672B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.91% (672B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.77% (624B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.77% (624B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.48% (1,224B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.77% (624B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.77% (624B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.64% (576B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.64% (576B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->06.96% (2,448B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | ->03.55% (1,248B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.84% (648B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.84% (648B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.64% (576B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.64% (576B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.34% (1,176B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.77% (624B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.77% (624B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.57% (552B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | |   ->01.57% (552B) in 2 places, all below massif's threshold (1.00%)
+|   | | | |     
+|   | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | 
+|   | ->13.17% (4,632B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | ->07.17% (2,520B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | ->03.69% (1,296B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.91% (672B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.91% (672B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.71% (600B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.71% (600B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.41% (1,200B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.77% (624B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.77% (624B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.57% (552B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.57% (552B) in 2 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->05.94% (2,088B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | ->03.55% (1,248B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.84% (648B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.84% (648B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.64% (576B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.64% (576B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->02.32% (816B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.30% (456B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.30% (456B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.02% (360B) in 2 places, all below massif's threshold (1.00%)
+|   | | | |   
+|   | | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | 
+|   | ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->00.07% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->05.82% (2,048B) 0x48DD1B4: _IO_file_doallocate (filedoalloc.c:101)
+| ->05.82% (2,048B) 0x48ED523: _IO_doallocbuf (genops.c:347)
+|   ->02.91% (1,024B) 0x48EA883: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:486)
+|   | ->02.91% (1,024B) 0x48ED5D1: _IO_default_uflow (genops.c:362)
+|   |   ->02.91% (1,024B) 0x48C41C3: __vfscanf_internal (vfscanf-internal.c:676)
+|   |     ->02.91% (1,024B) 0x48B7EC5: __isoc99_scanf (isoc99_scanf.c:30)
+|   |       ->02.91% (1,024B) 0x109312: main (main.c:44)
+|   |         
+|   ->02.91% (1,024B) 0x48EAF8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->02.91% (1,024B) 0x48EBAAE: _IO_new_file_xsputn (fileops.c:1244)
+|       ->02.91% (1,024B) 0x48EBAAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->02.91% (1,024B) 0x48DFC5C: puts (ioputs.c:40)
+|           ->02.91% (1,024B) 0x109DD1: menuEstructuras (main.c:288)
+|             ->02.91% (1,024B) 0x1092F4: main (main.c:43)
+|               
+->00.02% (8B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 45        457,620           35,768           22,264        13,504            0
+ 46        462,835           36,368           22,624        13,744            0
+ 47        468,214           36,968           22,984        13,984            0
+ 48        473,446           37,608           23,368        14,240            0
+ 49        478,777           38,208           23,728        14,480            0
+62.10% (23,728B) (heap allocation functions) malloc/new/new[], --alloc-fns, etc.
+->56.72% (21,672B) 0x10A672: create_node (binary_tree.c:8)
+| ->56.72% (21,672B) 0x10A71F: insert_node (binary_tree.c:40)
+|   ->28.89% (11,040B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | ->14.51% (5,544B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | ->07.35% (2,808B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | ->03.71% (1,416B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.88% (720B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.88% (720B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.76% (672B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.76% (672B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.58% (1,368B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.82% (696B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.82% (696B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.70% (648B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.70% (648B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->07.10% (2,712B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | ->03.64% (1,392B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.88% (720B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.88% (720B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.70% (648B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.70% (648B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.39% (1,296B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.76% (672B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.76% (672B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.57% (600B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.57% (600B) in 2 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | 
+|   | ->14.32% (5,472B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | ->07.29% (2,784B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | ->03.71% (1,416B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.88% (720B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.88% (720B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.76% (672B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.76% (672B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.52% (1,344B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.82% (696B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.82% (696B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.63% (624B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.63% (624B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->06.97% (2,664B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | ->03.58% (1,368B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.82% (696B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.82% (696B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.70% (648B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.70% (648B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.33% (1,272B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.76% (672B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.76% (672B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.57% (600B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | |   ->01.57% (600B) in 2 places, all below massif's threshold (1.00%)
+|   | | | |     
+|   | | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | 
+|   | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->27.76% (10,608B) 0x10A741: insert_node (binary_tree.c:45)
+|   | ->14.45% (5,520B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | ->07.29% (2,784B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | ->03.71% (1,416B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.88% (720B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.88% (720B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.76% (672B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.76% (672B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.52% (1,344B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.82% (696B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.82% (696B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.63% (624B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.63% (624B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->07.10% (2,712B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | ->03.64% (1,392B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.88% (720B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.88% (720B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.70% (648B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.70% (648B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.39% (1,296B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.76% (672B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.76% (672B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.57% (600B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.57% (600B) in 2 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | 
+|   | ->13.25% (5,064B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | ->07.22% (2,760B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | ->03.64% (1,392B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.88% (720B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.88% (720B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.70% (648B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.70% (648B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->03.52% (1,344B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.82% (696B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.82% (696B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.63% (624B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.63% (624B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->05.97% (2,280B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | ->03.58% (1,368B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | ->01.82% (696B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | | ->01.82% (696B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.70% (648B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.70% (648B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | | 
+|   | | | ->02.32% (888B) 0x10A741: insert_node (binary_tree.c:45)
+|   | | | | ->01.32% (504B) 0x10A76B: insert_node (binary_tree.c:49)
+|   | | | | | ->01.32% (504B) in 3 places, all below massif's threshold (1.00%)
+|   | | | | |   
+|   | | | | ->01.01% (384B) in 2 places, all below massif's threshold (1.00%)
+|   | | | |   
+|   | | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | | 
+|   | | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | | 
+|   | ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   | 
+|   ->00.06% (24B) in 1+ places, all below ms_print's threshold (01.00%)
+|   
+->05.36% (2,048B) 0x48DD1B4: _IO_file_doallocate (filedoalloc.c:101)
+| ->05.36% (2,048B) 0x48ED523: _IO_doallocbuf (genops.c:347)
+|   ->02.68% (1,024B) 0x48EA883: _IO_file_underflow@@GLIBC_2.2.5 (fileops.c:486)
+|   | ->02.68% (1,024B) 0x48ED5D1: _IO_default_uflow (genops.c:362)
+|   |   ->02.68% (1,024B) 0x48C41C3: __vfscanf_internal (vfscanf-internal.c:676)
+|   |     ->02.68% (1,024B) 0x48B7EC5: __isoc99_scanf (isoc99_scanf.c:30)
+|   |       ->02.68% (1,024B) 0x109312: main (main.c:44)
+|   |         
+|   ->02.68% (1,024B) 0x48EAF8F: _IO_file_overflow@@GLIBC_2.2.5 (fileops.c:745)
+|     ->02.68% (1,024B) 0x48EBAAE: _IO_new_file_xsputn (fileops.c:1244)
+|       ->02.68% (1,024B) 0x48EBAAE: _IO_file_xsputn@@GLIBC_2.2.5 (fileops.c:1197)
+|         ->02.68% (1,024B) 0x48DFC5C: puts (ioputs.c:40)
+|           ->02.68% (1,024B) 0x109DD1: menuEstructuras (main.c:288)
+|             ->02.68% (1,024B) 0x1092F4: main (main.c:43)
+|               
+->00.02% (8B) in 1+ places, all below ms_print's threshold (01.00%)
+
+--------------------------------------------------------------------------------
+  n        time(i)         total(B)   useful-heap(B) extra-heap(B)    stacks(B)
+--------------------------------------------------------------------------------
+ 50        483,349           38,728           24,040        14,688            0
+ 51        487,971           39,248           24,352        14,896            0
+ 52        492,395           39,768           24,664        15,104            0
+ 53        496,735           40,248           24,952        15,296            0
+ 54        501,372           40,768           25,264        15,504            0
+ 55        505,887           41,288           25,576        15,712            0
+ 56        510,211           41,768           25,864        15,904            0

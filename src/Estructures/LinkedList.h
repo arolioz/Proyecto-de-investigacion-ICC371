@@ -21,6 +21,8 @@ int buscar_linkedList(LINKED_LIST *list, int value);
 int eliminar_linkedList(LINKED_LIST *list, int value);
 void mostrar_linkedList(LINKED_LIST *list);
 
+void free_linkedList(LINKED_LIST *list);
+
 int add(int a, int b);
 int multiply(int a, int b);
 
