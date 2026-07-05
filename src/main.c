@@ -112,8 +112,8 @@ int main(void){
 
                 printf("\nOperacion: %s\n", operaciones[operacion - 1]);
                 printf("Cantidad de elementos: %d\n", cantidadElementos[cantidad - 1]);
-                printf("Tiempo de ejecucion: %f segundos\n", tiempoTotal);
-                printf("Memoria usada: %.6f KB\n\n", memoriaUsada);
+                printf("Tiempo de ejecucion: %.9f segundos\n", tiempoTotal);
+                printf("Memoria usada: %.9f KB\n\n", memoriaUsada);
                 printf("----------------------------------------\n");
                 free_array(arreglo);
                 break;
@@ -200,7 +200,7 @@ int main(void){
                     
                 }
                 if (operacion == 2) {
-                    search_tree(arbol, cantidadElementos[cantidad - 1]);
+                    search_tree(arbol, 1);
                      
                 } 
                 if (operacion == 3) {
