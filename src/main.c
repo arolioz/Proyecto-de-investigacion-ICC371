@@ -163,9 +163,9 @@ int main(void){
 
                 }
                 if (operacion == 2) {
-                    int index = search_hash(lista,cantidadElementos[cantidad - 1]);
+                    int index = search_hash(lista,1);
             
-                    printf("El valor %d se encuentra en el índice: %d\n",cantidadElementos[cantidad - 1], index); 
+                    printf("El valor %d se encuentra en el índice: %d\n",1, index); 
                      
                 } 
                 if (operacion == 3) {
