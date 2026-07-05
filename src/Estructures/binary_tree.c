@@ -198,3 +198,23 @@ void create_balanced(BINARY_TREE *tree, int start, int end)
     create_balanced(tree, start, mid - 1);
     create_balanced(tree, mid + 1, end);
 }
+
+void free_node(TREE_NODE *root)
+{
+    if (root == NULL)
+        return;
+
+    free_node(root->left);
+    free_node(root->right);
+
+    free(root);
+}
+
+void free_tree(BINARY_TREE *tree)
+{
+    if (tree == NULL)
+        return;
+
+    free_node(tree->root);
+    free(tree);
+}
