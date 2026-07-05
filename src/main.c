@@ -196,15 +196,15 @@ int main(void){
 
                 
                 if (operacion == 1) {
-                    insert_tree(arbol, 17);
+                    insert_tree(arbol, cantidadElementos[cantidad - 1] + 1);
                     
                 }
                 if (operacion == 2) {
-                    search_tree(arbol, 17);
+                    search_tree(arbol, cantidadElementos[cantidad - 1]);
                      
                 } 
                 if (operacion == 3) {
-                    delete_tree(arbol, 17);
+                    delete_tree(arbol, cantidadElementos[cantidad - 1]);
                     
                 }
 
