@@ -204,7 +204,7 @@ int main(void){
                      
                 } 
                 if (operacion == 3) {
-                    delete_tree(arbol, cantidadElementos[cantidad - 1]);
+                    delete_tree(arbol, 1);
                     
                 }
 
