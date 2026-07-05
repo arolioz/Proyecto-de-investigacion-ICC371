@@ -128,9 +128,9 @@ int main(void){
                     insertar_linkedList(list, 15);
                 }
                 if (operacion == 2) {
-                    int index = buscar_linkedList(list, cantidadElementos[cantidad - 1]);
+                    int index = buscar_linkedList(list, 1);
             
-                    printf("El valor %d se encuentra en el índice: %d\n",cantidadElementos[cantidad - 1], index); 
+                    printf("El valor %d se encuentra en el índice: %d\n",1, index); 
                 } 
                 if (operacion == 3) {
                     int result = eliminar_linkedList(list, 15);
